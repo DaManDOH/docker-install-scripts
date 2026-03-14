@@ -1,4 +1,2 @@
 #!/usr/bin/env bash
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do 
-    sudo apt-get remove ${pkg};
-done
+sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-doc podman-docker containerd runc | cut -f1)
