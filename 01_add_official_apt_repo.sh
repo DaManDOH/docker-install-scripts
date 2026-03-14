@@ -10,10 +10,11 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 # Add the repository to Apt sources:
+codename="${UBUNTU_CODENAME:-$VERSION_CODENAME}"
 sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
 Types: deb
 URIs: https://download.docker.com/linux/debian
-Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+Suites: $(. /etc/os-release && echo "${codename}")
 Components: stable
 Signed-By: /etc/apt/keyrings/docker.asc
 EOF
