@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+## From https://docs.docker.com/engine/install/debian/
+
 sudo bash -c "apt update && \
     apt install \
         docker-ce \
