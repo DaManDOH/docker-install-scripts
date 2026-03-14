@@ -9,3 +9,5 @@ sudo bash -c "apt update && \
         containerd.io \
         docker-buildx-plugin \
         docker-compose-plugin"
+
+sudo groupadd docker
