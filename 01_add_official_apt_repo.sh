@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-https://docs.docker.com/engine/install/ubuntu/
+# See: https://docs.docker.com/engine/install/ubuntu/
 
 # Add Docker's official GPG key:
 sudo apt update
